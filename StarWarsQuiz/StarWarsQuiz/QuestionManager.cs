@@ -30,7 +30,24 @@ namespace StarWarsQuiz
             choices[2] = "Rey";
             choices[3] = "Mon Mothma";
             correctChoice = 0;
+            questionList.Add(new Question(text, choices, correctChoice));
 
+            text = "Who is Luke's father?";
+            choices = new string[4];
+            choices[0] = "Obi-Wan";
+            choices[1] = "Darth Vader";
+            choices[2] = "Tarkin";
+            choices[3] = "Yoda";
+            correctChoice = 1;
+            questionList.Add(new Question(text, choices, correctChoice));
+
+            text = "What species does Chewbacca belong to?";
+            choices = new string[4];
+            choices[0] = "Ewok";
+            choices[1] = "Rancor";
+            choices[2] = "Lasat";
+            choices[3] = "Wookee";
+            correctChoice = 3;
             questionList.Add(new Question(text, choices, correctChoice));
         }
 
