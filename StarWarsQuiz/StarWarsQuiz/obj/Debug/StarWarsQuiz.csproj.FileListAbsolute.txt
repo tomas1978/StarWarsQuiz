@@ -1,0 +1,10 @@
+C:\Users\tomas\source\repos\StarWarsQuiz\StarWarsQuiz\StarWarsQuiz\bin\Debug\StarWarsQuiz.exe.config
+C:\Users\tomas\source\repos\StarWarsQuiz\StarWarsQuiz\StarWarsQuiz\bin\Debug\StarWarsQuiz.exe
+C:\Users\tomas\source\repos\StarWarsQuiz\StarWarsQuiz\StarWarsQuiz\bin\Debug\StarWarsQuiz.pdb
+C:\Users\tomas\source\repos\StarWarsQuiz\StarWarsQuiz\StarWarsQuiz\obj\Debug\StarWarsQuiz.csprojAssemblyReference.cache
+C:\Users\tomas\source\repos\StarWarsQuiz\StarWarsQuiz\StarWarsQuiz\obj\Debug\StarWarsQuiz.Form1.resources
+C:\Users\tomas\source\repos\StarWarsQuiz\StarWarsQuiz\StarWarsQuiz\obj\Debug\StarWarsQuiz.Properties.Resources.resources
+C:\Users\tomas\source\repos\StarWarsQuiz\StarWarsQuiz\StarWarsQuiz\obj\Debug\StarWarsQuiz.csproj.GenerateResource.cache
+C:\Users\tomas\source\repos\StarWarsQuiz\StarWarsQuiz\StarWarsQuiz\obj\Debug\StarWarsQuiz.csproj.CoreCompileInputs.cache
+C:\Users\tomas\source\repos\StarWarsQuiz\StarWarsQuiz\StarWarsQuiz\obj\Debug\StarWarsQuiz.exe
+C:\Users\tomas\source\repos\StarWarsQuiz\StarWarsQuiz\StarWarsQuiz\obj\Debug\StarWarsQuiz.pdb
