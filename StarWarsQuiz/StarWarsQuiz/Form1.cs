@@ -32,6 +32,19 @@ namespace StarWarsQuiz
             {
                 choiceButtons[i].Text = question.Choices[i];
             }
+            questionTextBox.ReadOnly = true;
+        }
+
+        public void EnableAllButtons()
+        {
+            foreach (Button b in choiceButtons)
+                b.Enabled = true;
+        }
+
+        public void DisableAllButtons()
+        {
+            foreach (Button b in choiceButtons)
+                b.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,6 +56,7 @@ namespace StarWarsQuiz
             }
             else
                 questionTextBox.Text = "INCORRECT!!!";
+            DisableAllButtons();
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -54,6 +68,7 @@ namespace StarWarsQuiz
             }
             else
                 questionTextBox.Text = "INCORRECT!!!";
+            DisableAllButtons();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -66,6 +81,7 @@ namespace StarWarsQuiz
 
             else
                 questionTextBox.Text = "INCORRECT!!!";
+            DisableAllButtons();
         }
         private void button4_Click(object sender, EventArgs e)
         {
@@ -77,6 +93,7 @@ namespace StarWarsQuiz
             }
             else
                 questionTextBox.Text = "INCORRECT!!!";
+            DisableAllButtons();
         }
 
         private void nextButton_Click(object sender, EventArgs e)
@@ -84,13 +101,27 @@ namespace StarWarsQuiz
             question = questionManager.GetNextQuestion();
             if(question!=null)
             {
+                EnableAllButtons();
                 questionTextBox.Text = question.QuestionText;
                 for (int i = 0; i < choiceButtons.Length; i++)
                 {
                     choiceButtons[i].Text = question.Choices[i];
                 }
             }
+        }
 
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            EnableAllButtons();
+            points = 0;
+            pointsLabel.Text = "Points: " + points;
+            questionManager.Restart();
+            question = questionManager.GetNextQuestion();
+            questionTextBox.Text = question.QuestionText;
+            for (int i = 0; i < choiceButtons.Length; i++)
+            {
+                choiceButtons[i].Text = question.Choices[i];
+            }
         }
     }
 }

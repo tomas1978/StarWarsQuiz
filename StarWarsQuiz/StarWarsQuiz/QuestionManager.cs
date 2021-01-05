@@ -54,7 +54,7 @@ namespace StarWarsQuiz
         public Question GetNextQuestion()
         {
             currentQuestion++;
-            if(currentQuestion<=questionList.Count)
+            if(currentQuestion<questionList.Count)
             {
                 return questionList[currentQuestion];
             }
@@ -64,5 +64,9 @@ namespace StarWarsQuiz
             }
         }
 
+        public void Restart()
+        {
+            currentQuestion = -1;
+        }
     }
 }

@@ -1,0 +1,24 @@
+What is the name of Luke's home planet?
+Dantooine
+Coruscant
+Tatooine
+Alderaan
+2
+Who is Luke's twin sister?
+Leia
+Padmé
+Rey
+Mon Mothma
+0
+Who is Luke's father?
+Obi-Wan
+Darth Vader
+Tarkin
+Yoda
+1
+What species does Chewbacca belong to?
+Ewok
+Rancor
+Lasat
+Wookee
+3
