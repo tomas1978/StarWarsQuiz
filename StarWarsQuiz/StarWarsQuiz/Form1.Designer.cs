@@ -67,16 +67,16 @@ namespace StarWarsQuiz
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(35, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 39);
+            this.label1.Size = new System.Drawing.Size(164, 39);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Question 1";
+            this.label1.Text = "Question";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(42, 227);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 51);
+            this.button1.Size = new System.Drawing.Size(160, 51);
             this.button1.TabIndex = 3;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -85,9 +85,9 @@ namespace StarWarsQuiz
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(236, 227);
+            this.button2.Location = new System.Drawing.Point(223, 227);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 51);
+            this.button2.Size = new System.Drawing.Size(160, 51);
             this.button2.TabIndex = 4;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@ namespace StarWarsQuiz
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(42, 328);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 51);
+            this.button3.Size = new System.Drawing.Size(160, 51);
             this.button3.TabIndex = 5;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
@@ -107,9 +107,9 @@ namespace StarWarsQuiz
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(236, 328);
+            this.button4.Location = new System.Drawing.Point(223, 328);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(147, 51);
+            this.button4.Size = new System.Drawing.Size(160, 51);
             this.button4.TabIndex = 6;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
@@ -141,7 +141,7 @@ namespace StarWarsQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 488);
+            this.ClientSize = new System.Drawing.Size(422, 497);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.pointsLabel);
             this.Controls.Add(this.button4);

@@ -24,13 +24,16 @@ namespace StarWarsQuiz
             choiceButtons[1] = button2;
             choiceButtons[2] = button3;
             choiceButtons[3] = button4;
-
+            
             questionManager = new QuestionManager();
             question = questionManager.GetNextQuestion();
             questionTextBox.Text = question.QuestionText;
-            for(int i=0;i<choiceButtons.Length;i++)
+            //questionTextBox.Text = "test";
+
+            for (int i=0;i<choiceButtons.Length;i++)
             {
                 choiceButtons[i].Text = question.Choices[i];
+                //choiceButtons[i].Text = "test";
             }
             questionTextBox.ReadOnly = true;
         }
@@ -122,6 +125,7 @@ namespace StarWarsQuiz
             {
                 choiceButtons[i].Text = question.Choices[i];
             }
+
         }
     }
 }

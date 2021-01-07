@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace StarWarsQuiz
 {
@@ -14,41 +15,29 @@ namespace StarWarsQuiz
         {
             questionList = new List<Question>();
             currentQuestion = -1;
-            string text = "What is the name of Luke's home planet?";
+
+            StreamReader sr = new StreamReader("../../questions.txt");
+
+            string fileRow;
+            int rowCounter = 0;
+            string text = "";
             string[] choices = new string[4];
-            choices[0] = "Dantooine";
-            choices[1] = "Coruscant";
-            choices[2] = "Tatooine";
-            choices[3] = "Alderaan";
-            int correctChoice = 2;
-            questionList.Add(new Question(text, choices, correctChoice));
-            
-            text = "Who is Luke's twin sister?";
-            choices = new string[4];
-            choices[0] = "Leia";
-            choices[1] = "Padmé";
-            choices[2] = "Rey";
-            choices[3] = "Mon Mothma";
-            correctChoice = 0;
-            questionList.Add(new Question(text, choices, correctChoice));
+            int correctChoice;
 
-            text = "Who is Luke's father?";
-            choices = new string[4];
-            choices[0] = "Obi-Wan";
-            choices[1] = "Darth Vader";
-            choices[2] = "Tarkin";
-            choices[3] = "Yoda";
-            correctChoice = 1;
-            questionList.Add(new Question(text, choices, correctChoice));
-
-            text = "What species does Chewbacca belong to?";
-            choices = new string[4];
-            choices[0] = "Ewok";
-            choices[1] = "Rancor";
-            choices[2] = "Lasat";
-            choices[3] = "Wookee";
-            correctChoice = 3;
-            questionList.Add(new Question(text, choices, correctChoice));
+            while ((fileRow = sr.ReadLine()) != null)
+            {
+                if (rowCounter % 6 == 0)
+                    text = fileRow;
+                else if (rowCounter % 6 == 1 || rowCounter % 6 == 2 || rowCounter % 6 == 3 || rowCounter % 6 == 4)
+                    choices[rowCounter % 6-1] = fileRow;
+                else
+                {
+                    correctChoice = int.Parse(fileRow);
+                    questionList.Add(new Question(text, choices, correctChoice));
+                    choices = new string[4];
+                }
+                rowCounter++;
+            }
         }
 
         public Question GetNextQuestion()
