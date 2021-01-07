@@ -38,6 +38,8 @@ namespace StarWarsQuiz
             this.button4 = new System.Windows.Forms.Button();
             this.pointsLabel = new System.Windows.Forms.Label();
             this.resetButton = new System.Windows.Forms.Button();
+            this.questionNumberLabel = new System.Windows.Forms.Label();
+            this.rankLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // questionTextBox
@@ -137,11 +139,33 @@ namespace StarWarsQuiz
             this.resetButton.UseVisualStyleBackColor = false;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
+            // questionNumberLabel
+            // 
+            this.questionNumberLabel.AutoSize = true;
+            this.questionNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionNumberLabel.Location = new System.Drawing.Point(194, 21);
+            this.questionNumberLabel.Name = "questionNumberLabel";
+            this.questionNumberLabel.Size = new System.Drawing.Size(51, 39);
+            this.questionNumberLabel.TabIndex = 9;
+            this.questionNumberLabel.Text = "-/-";
+            // 
+            // rankLabel
+            // 
+            this.rankLabel.AutoSize = true;
+            this.rankLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rankLabel.Location = new System.Drawing.Point(162, 181);
+            this.rankLabel.Name = "rankLabel";
+            this.rankLabel.Size = new System.Drawing.Size(93, 31);
+            this.rankLabel.TabIndex = 10;
+            this.rankLabel.Text = "Rank: ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(422, 497);
+            this.Controls.Add(this.rankLabel);
+            this.Controls.Add(this.questionNumberLabel);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.pointsLabel);
             this.Controls.Add(this.button4);
@@ -169,6 +193,8 @@ namespace StarWarsQuiz
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label pointsLabel;
         private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.Label questionNumberLabel;
+        private System.Windows.Forms.Label rankLabel;
     }
 }
 

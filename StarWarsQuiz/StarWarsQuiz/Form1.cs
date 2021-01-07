@@ -16,6 +16,7 @@ namespace StarWarsQuiz
         QuestionManager questionManager;
         Button[] choiceButtons;
         int points = 0;
+        int questionCounter;
         public Form1()
         {
             InitializeComponent();
@@ -28,14 +29,15 @@ namespace StarWarsQuiz
             questionManager = new QuestionManager();
             question = questionManager.GetNextQuestion();
             questionTextBox.Text = question.QuestionText;
-            //questionTextBox.Text = "test";
 
             for (int i=0;i<choiceButtons.Length;i++)
             {
                 choiceButtons[i].Text = question.Choices[i];
-                //choiceButtons[i].Text = "test";
             }
             questionTextBox.ReadOnly = true;
+            questionCounter = 1;
+            questionNumberLabel.Text = questionCounter+"/" + questionManager.GetNumberOfQuestions();
+            WriteRank();
         }
 
         public void EnableAllButtons()
@@ -50,12 +52,26 @@ namespace StarWarsQuiz
                 b.Enabled = false;
         }
 
+        public void WriteRank()
+        {
+            if (points > 0.9 * questionManager.GetNumberOfQuestions())
+                rankLabel.Text = "Rank: Jedi Master";
+            else if (points > 0.7 * questionManager.GetNumberOfQuestions())
+                rankLabel.Text = "Rank: Jedi";
+            else if (points > 0.5 * questionManager.GetNumberOfQuestions())
+                rankLabel.Text = "Rank: Padawan";
+            else if (points > 0.25 * questionManager.GetNumberOfQuestions())
+                rankLabel.Text = "Rank: Nerf Herder";
+            else
+                rankLabel.Text = "Rank: Moof Milker";
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if (question.CorrectChoice == 0) { 
                 questionTextBox.Text = "CORRECT ANSWER!";
                 points++;
                 pointsLabel.Text = "Points: " + points;
+                WriteRank();
             }
             else
                 questionTextBox.Text = "INCORRECT!!!";
@@ -68,6 +84,7 @@ namespace StarWarsQuiz
                 questionTextBox.Text = "CORRECT ANSWER!";
                 points++;
                 pointsLabel.Text = "Points: " + points;
+                WriteRank();
             }
             else
                 questionTextBox.Text = "INCORRECT!!!";
@@ -80,6 +97,7 @@ namespace StarWarsQuiz
                 questionTextBox.Text = "CORRECT ANSWER!";
                 points++;
                 pointsLabel.Text = "Points: " + points;
+                WriteRank();
             }
 
             else
@@ -93,6 +111,7 @@ namespace StarWarsQuiz
                 questionTextBox.Text = "CORRECT ANSWER!";
                 points++;
                 pointsLabel.Text = "Points: " + points;
+                WriteRank();
             }
             else
                 questionTextBox.Text = "INCORRECT!!!";
@@ -111,6 +130,11 @@ namespace StarWarsQuiz
                     choiceButtons[i].Text = question.Choices[i];
                 }
             }
+            if (questionCounter < questionManager.GetNumberOfQuestions())
+            {
+                questionCounter++;
+                questionNumberLabel.Text = questionCounter + "/" + questionManager.GetNumberOfQuestions();
+            }
         }
 
         private void resetButton_Click(object sender, EventArgs e)
@@ -125,7 +149,9 @@ namespace StarWarsQuiz
             {
                 choiceButtons[i].Text = question.Choices[i];
             }
-
+            questionCounter = 1;
+            questionNumberLabel.Text = questionCounter + "/" + questionManager.GetNumberOfQuestions();
+            WriteRank();
         }
     }
 }

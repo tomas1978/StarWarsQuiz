@@ -57,5 +57,10 @@ namespace StarWarsQuiz
         {
             currentQuestion = -1;
         }
+
+        public int GetNumberOfQuestions()
+        {
+            return questionList.Count;
+        }
     }
 }
