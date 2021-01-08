@@ -28,4 +28,33 @@ Darth Sidious
 Darth Plageous
 Darth Tyranus
 1
-
+What is the name of Boba Fett's ship?
+Millennium Falcon
+The Slave
+The Ghost
+The Fireball
+1
+Who was Obi-Wan's master?
+Mace Windu
+Yoda
+Qui-Gon Yinn
+Plo Koon
+2
+What cell block was Leia in?
+1818
+1412
+1234
+1138
+3
+What is the number of Darth Vader's personal shuttle?
+ST-412
+ST-544
+ST-321
+ST-119
+2
+How tall is C3PO?
+182 cm
+178 cm
+171 cm
+165 cm
+2

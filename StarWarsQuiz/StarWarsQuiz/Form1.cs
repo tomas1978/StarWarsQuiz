@@ -68,53 +68,54 @@ namespace StarWarsQuiz
         private void button1_Click(object sender, EventArgs e)
         {
             if (question.CorrectChoice == 0) { 
-                questionTextBox.Text = "CORRECT ANSWER!";
+                questionTextBox.Text = "Impressive! Most impressive! The Force is strong with you!";
                 points++;
                 pointsLabel.Text = "Points: " + points;
                 WriteRank();
             }
             else
-                questionTextBox.Text = "INCORRECT!!!";
+                questionTextBox.Text = "INCORRECT!";
             DisableAllButtons();
         }
         private void button2_Click(object sender, EventArgs e)
         {
             if (question.CorrectChoice == 1)
             {
-                questionTextBox.Text = "CORRECT ANSWER!";
+                questionTextBox.Text = "Impressive! Most impressive! The Force is strong with you!";
                 points++;
                 pointsLabel.Text = "Points: " + points;
                 WriteRank();
             }
             else
-                questionTextBox.Text = "INCORRECT!!!";
+                questionTextBox.Text = "INCORRECT!";
             DisableAllButtons();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (question.CorrectChoice == 2) { 
-                questionTextBox.Text = "CORRECT ANSWER!";
+            if (question.CorrectChoice == 2)
+            {
+                questionTextBox.Text = "Impressive! Most impressive! The Force is strong with you!";
                 points++;
                 pointsLabel.Text = "Points: " + points;
                 WriteRank();
             }
-
             else
-                questionTextBox.Text = "INCORRECT!!!";
+                questionTextBox.Text = "INCORRECT!";
             DisableAllButtons();
         }
+        
         private void button4_Click(object sender, EventArgs e)
         {
             if (question.CorrectChoice == 3)
             {
-                questionTextBox.Text = "CORRECT ANSWER!";
+                questionTextBox.Text = "Impressive! Most impressive! The Force is strong with you!";
                 points++;
                 pointsLabel.Text = "Points: " + points;
                 WriteRank();
             }
             else
-                questionTextBox.Text = "INCORRECT!!!";
+                questionTextBox.Text = "INCORRECT!";
             DisableAllButtons();
         }
 
@@ -155,3 +156,4 @@ namespace StarWarsQuiz
         }
     }
 }
+
