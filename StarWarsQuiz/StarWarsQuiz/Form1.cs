@@ -65,21 +65,10 @@ namespace StarWarsQuiz
             else
                 rankLabel.Text = "Rank: Moof Milker";
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void EvaulateAnswer(int answer)
         {
-            if (question.CorrectChoice == 0) { 
-                questionTextBox.Text = "Impressive! Most impressive! The Force is strong with you!";
-                points++;
-                pointsLabel.Text = "Points: " + points;
-                WriteRank();
-            }
-            else
-                questionTextBox.Text = "INCORRECT!";
-            DisableAllButtons();
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (question.CorrectChoice == 1)
+            if (question.CorrectChoice == answer)
             {
                 questionTextBox.Text = "Impressive! Most impressive! The Force is strong with you!";
                 points++;
@@ -87,36 +76,26 @@ namespace StarWarsQuiz
                 WriteRank();
             }
             else
-                questionTextBox.Text = "INCORRECT!";
+                questionTextBox.Text = "INCORRECT! Perhaps you are not as strong as the Emperor thought!";
             DisableAllButtons();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EvaulateAnswer(0);
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EvaulateAnswer(1);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (question.CorrectChoice == 2)
-            {
-                questionTextBox.Text = "Impressive! Most impressive! The Force is strong with you!";
-                points++;
-                pointsLabel.Text = "Points: " + points;
-                WriteRank();
-            }
-            else
-                questionTextBox.Text = "INCORRECT!";
-            DisableAllButtons();
+            EvaulateAnswer(2);
         }
         
         private void button4_Click(object sender, EventArgs e)
         {
-            if (question.CorrectChoice == 3)
-            {
-                questionTextBox.Text = "Impressive! Most impressive! The Force is strong with you!";
-                points++;
-                pointsLabel.Text = "Points: " + points;
-                WriteRank();
-            }
-            else
-                questionTextBox.Text = "INCORRECT!";
-            DisableAllButtons();
+            EvaulateAnswer(3);
         }
 
         private void nextButton_Click(object sender, EventArgs e)
